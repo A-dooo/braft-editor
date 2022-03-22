@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import mergeClassNames from '@maximusft/mergeclassnames';
 
 import ResponsiveHelper from 'helpers/responsive';
 
@@ -118,12 +118,10 @@ class DropDown extends React.Component {
 
     return (
       <div
-        className={classNames(
+        className={mergeClassNames(
           'bf-dropdown',
-          {
-            active: !disabled && active,
-            'disabled': disabled,
-          },
+          !disabled && active && 'active',
+          disabled && 'disabled',
           className,
         )}
       >
@@ -158,9 +156,10 @@ class DropDown extends React.Component {
         >
           <i
             style={{ marginLeft: offset * -1 }}
-            className={classNames('dropdown-arrow', {
-              active: arrowActive,
-            })}
+            className={mergeClassNames(
+              'dropdown-arrow',
+              arrowActive && 'active',
+            )}
           />
           <div className="dropdown-content-inner">{children}</div>
         </div>

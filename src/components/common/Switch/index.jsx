@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import mergeClassNames from '@maximusft/mergeclassnames';
 
 import './style.scss';
 
@@ -11,9 +11,7 @@ const Switch = (props) => {
     <div
       role="presentation"
       onClick={() => onClick()}
-      className={classNames('bf-switch', className, {
-        'active': active,
-      })}
+      className={mergeClassNames('bf-switch', className, active && 'active')}
     />
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import { ContentUtils } from 'braft-utils';
-import classNames from 'classnames';
+import mergeClassNames from '@maximusft/mergeclassnames';
 
 import ControlGroup from 'components/business/ControlGroup';
 
@@ -54,9 +54,10 @@ class TextAlign extends React.Component {
             key={uuidv4()}
             data-title={textAlignmentTitles[index]}
             data-alignment={item}
-            className={classNames('control-item button', {
-              active: item === this.state.currentAlignment,
-            })}
+            className={mergeClassNames(
+              'control-item button',
+              item === this.state.currentAlignment && 'active',
+            )}
             onClick={this.setAlignment}
           >
             <i className={`bfi-align-${item}`} />

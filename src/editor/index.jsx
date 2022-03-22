@@ -4,7 +4,7 @@ import BraftFinder from 'braft-finder';
 import { ColorUtils, ContentUtils } from 'braft-utils';
 import { Editor, EditorState } from 'draft-js';
 import { Map } from 'immutable';
-import classNames from 'classnames';
+import mergeClassNames from '@maximusft/mergeclassnames';
 
 import languages from 'languages';
 import getKeyBindingFn from 'configs/keybindings';
@@ -614,11 +614,13 @@ class BraftEditor extends React.Component {
       <div
         style={style}
         ref={this.setEditorContainerNode}
-        className={classNames('bf-container', className, {
-          'disabled': disabled,
-          'read-only': readOnly,
-          fullscreen: isFullscreen,
-        })}
+        className={mergeClassNames(
+          'bf-container',
+          className,
+          disabled && 'disabled',
+          readOnly && 'read-only',
+          isFullscreen && 'fullscreen',
+        )}
       >
         <ControlBar {...controlBarProps} />
         {componentBelowControlBar}

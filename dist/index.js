@@ -403,7 +403,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 		return classes.join(' ');
 	}
 
-	if (typeof module !== 'undefined' && module.exports) {
+	if ( true && module.exports) {
 		classNames.default = classNames;
 		module.exports = classNames;
 	} else if (true) {
@@ -2260,7 +2260,12 @@ module.exports = invariant;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "EditorState", function() { return /* reexport */ external_draft_js_["EditorState"]; });
+__webpack_require__.d(__webpack_exports__, "getDecorators", function() { return /* reexport */ getDecorators; });
 
 // EXTERNAL MODULE: ../node_modules/@babel/runtime/helpers/typeof.js
 var helpers_typeof = __webpack_require__(17);
@@ -8468,8 +8473,6 @@ editor_BraftEditor.propTypes = {
 /* harmony default export */ var editor_0 = (editor_BraftEditor);
 
 // CONCATENATED MODULE: ./index.jsx
-/* concated harmony reexport EditorState */__webpack_require__.d(__webpack_exports__, "EditorState", function() { return external_draft_js_["EditorState"]; });
-/* concated harmony reexport getDecorators */__webpack_require__.d(__webpack_exports__, "getDecorators", function() { return getDecorators; });
 
 
 

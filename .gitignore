@@ -15,7 +15,7 @@ node_modules
 *.sass-cache
 /playground/server/temp/*
 
-/dist
+# /dists
 
 # OS or Editor folders
 .DS_Store

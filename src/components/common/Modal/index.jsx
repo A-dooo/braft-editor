@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { BaseUtils } from 'braft-utils';
-import mergeClassNames from '@maximusft/mergeclassnames';
+import classNames from 'classnames';
 
 import './style.scss';
 
@@ -221,9 +221,11 @@ class Modal extends React.Component {
                   <button
                     type="button"
                     onClick={this.handleConfirm}
-                    className={mergeClassNames(
+                    className={classNames(
                       'bf-modal-confirm',
-                      !confirmable && 'disabled',
+                      {
+                        disabled: confirmable,
+                      }
                     )}
                   >
                     {confirmText || language.base.confirm}

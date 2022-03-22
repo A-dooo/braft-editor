@@ -1,6 +1,6 @@
 {
   "name": "@triclass/editor",
-  "version": "2.3.8",
+  "version": "0.0.1",
   "description": "Rich Text Editor fork by braft-editor",
   "main": "dist/index.js",
   "types": "index.d.ts",

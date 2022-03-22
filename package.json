@@ -1,10 +1,10 @@
 {
-  "name": "braft-editor",
+  "name": "@triclass/editor",
   "version": "2.3.8",
-  "description": "Rich Text Editor Based On Draft.js",
+  "description": "Rich Text Editor fork by braft-editor",
   "main": "dist/index.js",
   "types": "index.d.ts",
-  "author": "Margox",
+  "author": "adoooo",
   "scripts": {
     "start": "webpack-dev-server --config ./playground/webpack/webpack.config.dev.js -d --history-api-fallback --no-inline --progress --colors --host 0.0.0.0",
     "server": "cross-env NODE_ENV=development node ./playground/server.js",
@@ -19,9 +19,7 @@
     "draft-js",
     "rich",
     "text",
-    "editor",
-    "rich-text-editor",
-    "wysiwyg"
+    "editor"
   ],
   "license": "MIT",
   "devDependencies": {
